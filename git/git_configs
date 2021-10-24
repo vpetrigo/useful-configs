@@ -1,3 +1,3 @@
 git config --global alias.lg1 "log --graph --abbrev-commit --decorate --format=format:'%C(bold #ff9500)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) - %C(bold cyan)%an <%ae>%C(reset)%C(bold yellow)%d%C(reset)' --all"
 git config --global alias.lg '!git lg1'
-git config --global alias.delmerged '!git branch --merged | egrep -v "(^\*|master|develop|FOTA_stabilization)" | xargs -r git branch -d'
+git config --global alias.delmerged '!git branch --merged | egrep -v "(^\*|master|develop)" | xargs -r git branch -d'
