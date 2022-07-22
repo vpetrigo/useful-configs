@@ -2,3 +2,6 @@
 	lg1 = "log --graph --abbrev-commit --decorate --format=format:'%C(bold #ff9500)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) - %C(bold cyan)%an <%ae>%C(reset)%C(bold yellow)%d%C(reset)' --all"
 	lg = !git lg1
 	delmergedps = "!powershell -command 'git branch --merged | select-string -pattern \"(^\\*|master|develop)\" -notmatch | foreach { git branch -d \"$_\".Trim() }'"
+	punch = "!f () { git push -u "${1-origin}" "$(git branch --show-current)"; }; f"
+	shorty = "status --short --branch"
+	please = "push --force-with-lease"
